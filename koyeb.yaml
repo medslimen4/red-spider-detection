@@ -1,0 +1,14 @@
+name: red-spider-detection
+services:
+  - name: api
+    instance_type: nano
+    ports:
+      - port: 8000
+        protocol: http
+    routes:
+      - path: /
+        port: 8000
+    dockerfile: Dockerfile
+    env:
+      - name: PORT
+        value: "8000"
